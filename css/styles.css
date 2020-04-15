@@ -119,4 +119,42 @@
 	/* start the width of the grid-item at 200px and fill all available space */
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	/* grid-template-columns: fit-content(100px) 200px 200px 200px; fit 1st item to 100px width */
+	margin-bottom: 10px;
+}
+
+/* GRID TEMPLATE AREA */
+.container7 {
+	display: grid;
+	grid-gap: 10px;
+
+	grid-template-columns: 1fr 10fr 1fr;
+	grid-template-rows: 200px 200px 150px;
+	grid-template-areas:
+		"sidebar1 main-content sidebar2"
+		"sidebar1 main-content sidebar2"
+		"footer footer footer";
+}
+.footer {
+	grid-area: footer;
+	background-color: rgb(52, 52, 116);
+}
+.item-1 {
+	grid-area: sidebar1;
+	background-color: rgb(0, 255, 106);
+}
+.item-2 {
+	grid-area: main-content;
+	background-color: rgb(255, 0, 13);
+}
+.item-3 {
+	grid-area: sidebar2;
+	background-color: rgb(212, 71, 78);
+}
+@media (max-width: 700px) {
+	.container7 {
+		grid-template-areas:
+			"main-content main-content main-content"
+			"sidebar1 sidebar1 sidebar2"
+			"footer footer footer";
+	}
 }
