@@ -1,3 +1,33 @@
+.item1 {
+	background-color: blue;
+}
+.item2 {
+	background-color: rgb(0, 255, 106);
+}
+.item3 {
+	background-color: rgb(255, 0, 13);
+}
+.item4 {
+	background-color: rgb(0, 204, 255);
+}
+.item5 {
+	background-color: rgb(255, 136, 0);
+}
+.item6 {
+	background-color: rgb(155, 153, 161);
+}
+.item7 {
+	background-color: rgb(32, 34, 34);
+}
+.item8 {
+	background-color: rgb(111, 111, 189);
+}
+.item9 {
+	background-color: rgb(208, 208, 236);
+}
+.item10 {
+	background-color: rgb(52, 52, 116);
+}
 .container {
 	display: grid;
 	/* How big should the rows and cols be slized? */
@@ -82,33 +112,11 @@
 	grid-column: auto/-1; /*start from where you are to the end*/
 }
 
-.item1 {
-	background-color: blue;
-}
-.item2 {
-	background-color: rgb(0, 255, 106);
-}
-.item3 {
-	background-color: rgb(255, 0, 13);
-}
-.item4 {
-	background-color: rgb(0, 204, 255);
-}
-.item5 {
-	background-color: rgb(255, 136, 0);
-}
-.item6 {
-	background-color: rgb(155, 153, 161);
-}
-.item7 {
-	background-color: rgb(32, 34, 34);
-}
-.item8 {
-	background-color: rgb(111, 111, 189);
-}
-.item9 {
-	background-color: rgb(208, 208, 236);
-}
-.item10 {
-	background-color: rgb(52, 52, 116);
+/* MINMAX WITH AUTO-FIT AND AUTO-FILL */
+.container6 {
+	display: grid;
+	grid-gap: 10px;
+	/* start the width of the grid-item at 200px and fill all available space */
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	/* grid-template-columns: fit-content(100px) 200px 200px 200px; fit 1st item to 100px width */
 }
