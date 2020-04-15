@@ -21,9 +21,19 @@
 	/* Any grid-col that has been implicitly created should be 300px wide */
 	grid-auto-columns: 300px;
 }
-.item {
-	/* background-color: yellow; */
+.container2 {
+	/* fr-free space takes the remaining space available after specing the grid-items width */
+
+	display: grid;
+	grid-gap: 10px;
+	/* width of col1 is defined by auto */
+	/* width of col2 is defined by 200px */
+	/* width of col3 is defined by text content of 3rd div, which is auto */
+	/* col4 takes the remaining free space*/
+	grid-template-columns: auto 200px auto 1fr;
+	border: 1px solid orchid;
 }
+
 .item1 {
 	background-color: blue;
 }
