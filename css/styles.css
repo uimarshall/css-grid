@@ -7,6 +7,19 @@
 	grid-template-rows: 100px 50px 30px; /*controls the height of grid items*/
 	grid-gap: 10px;
 	grid-auto-rows: 300px; /*takes care of the implicit created row in this case item 10*/
+	margin-bottom: 20px;
+}
+
+/* GRID-AUTO-FLOW  */
+/* It takes care of grid-items defaulting to row, once cols are created */
+/* It works like flex-flow */
+
+.container1 {
+	display: grid;
+	grid-template-columns: 200px 500px 300px;
+	grid-auto-flow: column;
+	/* Any grid-col that has been implicitly created should be 300px wide */
+	grid-auto-columns: 300px;
 }
 .item {
 	/* background-color: yellow; */
