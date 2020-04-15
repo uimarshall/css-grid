@@ -21,6 +21,8 @@
 	/* Any grid-col that has been implicitly created should be 300px wide */
 	grid-auto-columns: 300px;
 }
+
+/* <!-- SIZING -GRID-TRACK */
 .container2 {
 	/* fr-free space takes the remaining space available after specing the grid-items width */
 
@@ -34,6 +36,12 @@
 	border: 1px solid orchid;
 }
 
+.container3 {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(5, 1fr);
+}
+
 .item1 {
 	background-color: blue;
 }
@@ -42,6 +50,10 @@
 }
 .item3 {
 	background-color: rgb(255, 0, 13);
+	/* Instead of using content width or free space(fr), we use span to specify the width of particular item */
+	/* This can be used for positioning */
+	grid-column: span 2;
+	grid-row: span 3;
 }
 .item4 {
 	background-color: rgb(0, 204, 255);
