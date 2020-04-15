@@ -21,6 +21,8 @@
 	/* Any grid-col that has been implicitly created should be 300px wide */
 	grid-auto-columns: 300px;
 }
+
+/* <!-- SIZING -GRID-TRACK */
 .container2 {
 	/* fr-free space takes the remaining space available after specing the grid-items width */
 
