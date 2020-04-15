@@ -2,9 +2,11 @@
 	display: grid;
 	/* How big should the rows and cols be slized? */
 	/* We will hv 3 cols of 300px wide, the browser will place each grid-item 100px wide it in the cols. */
+	/* Once the number of cols specified is created, the rest of the grid-items defaults to row  */
 	grid-template-columns: 100px 100px 100px; /*controls the width of grid items*/
 	grid-template-rows: 100px 50px 30px; /*controls the height of grid items*/
 	grid-gap: 10px;
+	grid-auto-rows: 300px; /*takes care of the implicit created row in this case item 10*/
 }
 .item {
 	/* background-color: yellow; */
