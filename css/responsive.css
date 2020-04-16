@@ -1,0 +1,195 @@
+/* Globals */
+body {
+	font-size: 15px;
+}
+button {
+	background: #ffc600;
+	border: 0;
+	padding: 10px 20px;
+}
+img {
+	max-width: 100%; /*img will not spill out of parent container*/
+}
+.wrapper {
+	display: grid;
+	grid-gap: 20px;
+}
+
+/* Hero */
+.top {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas:
+		"hero hero chops1"
+		"hero hero chops2";
+}
+.hero {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: start;
+	grid-area: hero;
+	min-height: 400px;
+	background: white url("/images/heroBg.jpeg");
+	background-size: cover;
+	background-position: bottom right;
+	padding: 50px;
+}
+.hero > * {
+	background-color: greenyellow;
+	padding: 10px;
+}
+.chops {
+	background: greenyellow;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	align-content: center;
+}
+.chops p {
+	margin: 0;
+}
+.chops1 {
+	grid-area: chops1;
+}
+.chops2 {
+	grid-area: chops2;
+}
+.price {
+	font-size: 60px;
+	font-weight: 300;
+}
+
+/* Navigation */
+.menu ul {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	list-style-type: none;
+
+	padding: 0;
+}
+.menu a {
+	display: block;
+	line-height: 1.4;
+	text-align: center;
+	background-color: greenyellow;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 20px;
+	font-weight: 300;
+	padding: 5px;
+}
+[aria-controls="menu-list"] {
+	display: none;
+}
+
+/* Features */
+.features {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature {
+	background: #eeeeee;
+	padding: 10px;
+	border: 1px solid #999999;
+	text-align: center;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+.feature .icon {
+	font-size: 20px;
+}
+.feature p {
+	color: #333333;
+}
+
+/* About */
+.about {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 400px 1fr;
+	padding: 50px;
+	background: #dddddd;
+	align-items: center;
+}
+
+/* Gallery */
+.gallery {
+	display: grid;
+	/* grid-gap: 10px; */
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gallery img {
+	width: 100%;
+}
+.gallery h2 {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-column: 1/-1;
+	grid-gap: 20px;
+	align-items: center;
+}
+.gallery h2:before,
+.gallery h2:after {
+	display: block;
+	content: "";
+	background: linear-gradient(to left, greenyellow, transparent);
+	height: 10px;
+}
+.gallery h2:after {
+	background: linear-gradient(to right, greenyellow, transparent);
+}
+@media (max-width: 1000px) {
+	.menu {
+		order: -1;
+		perspective: 800px;
+	}
+	[aria-controls="menu-list"] {
+		display: block;
+		margin-bottom: 10px;
+	}
+	.menu ul {
+		max-height: 0;
+		overflow: hidden;
+		transform: rotateX(90deg);
+		transition: all 0.5s;
+	}
+	[aria-expanded="true"] ~ ul {
+		display: grid;
+		max-height: 500px;
+		transform: rotateX(0);
+		margin-bottom: 10px;
+	}
+	[aria-expanded="false"] .close {
+		display: none;
+	}
+	[aria-expanded="true"] .close {
+		display: inline-block;
+	}
+	[aria-expanded="true"] .close {
+		display: none;
+	}
+}
+@media (max-width: 700px) {
+	.top {
+		grid-template-areas:
+			"hero hero "
+			"chops1 chops2 ";
+	}
+	/* About */
+	.about {
+		grid-template-columns: 1fr;
+	}
+}
+@media (max-width: 500px) {
+	.top {
+		grid-template-areas:
+			"hero"
+			"chops1"
+			"chops2";
+		align-content: center;
+		justify-content: center;
+	}
+}
