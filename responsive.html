@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<title>Responsive Bukka</title>
+	</head>
+	<body>
+		<main class="wrapper">
+			<section class="top">
+				<header class="hero">
+					<h1>Sweet Delight Bukka</h1>
+					<p>Tasty, i like it!</p>
+				</header>
+				<div class="chops chops1">
+					<p class="price">$2.66</p>
+					<p>Munchies</p>
+				</div>
+				<div class="chops chops2">
+					<p class="price">$5.88</p>
+					<p>StewdYam</p>
+				</div>
+			</section>
+			<nav class="menu">
+				<button aria-controls="menu-list" aria-expanded="false">
+					<span class="open"></span>
+					<span class="close">x</span>
+					Menu
+				</button>
+				<ul id="menu-list">
+					<li><a href="">Wine</a></li>
+					<li><a href="">Continental</a></li>
+					<li><a href="">Beers</a></li>
+					<li><a href="">Desserts</a></li>
+					<li><a href="">Liqour</a></li>
+				</ul>
+			</nav>
+			<section class="features">
+				<div class="feature">
+					<img src="images/food.png" alt="food" class="icon" />
+					<p>Wine</p>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, eos.
+					</p>
+				</div>
+				<div class="feature">
+					<img src="images/food-1.png" alt="food" class="icon" />
+					<p>Liquor</p>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, eos.
+					</p>
+				</div>
+				<div class="feature">
+					<img src="images/food-2.png" alt="food" class="icon" />
+					<p>Music</p>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, eos.
+					</p>
+				</div>
+				<div class="feature">
+					<img src="images/food-3.png" alt="food" class="icon" />
+					<p>Seafood</p>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, eos.
+					</p>
+				</div>
+			</section>
+			<section class="about">
+				<img src="images/dish.png" alt="food" />
+				<div class="dish-details">
+					<h2>Featured Dessert</h2>
+					<p class="dish-desc">Slim Profile, Big strong reliable yummy yummy</p>
+					<p class="album-desc">
+						A dessert to lighten your day!.
+					</p>
+					<button type="button" class="learn-more">learn more</button>
+				</div>
+			</section>
+			<!-- Gallery -->
+			<section class="gallery">
+				<h2>Instant Gram</h2>
+				<img
+					src="https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+				<img
+					src="https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+				<img
+					src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+				<img
+					src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+				<img
+					src="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+				<img
+					src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+				<img
+					src="https://images.pexels.com/photos/372882/pexels-photo-372882.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+				<img
+					src="https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+				<img
+					src="https://images.pexels.com/photos/370984/pexels-photo-370984.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+				<img
+					src="https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+					alt="food"
+				/>
+			</section>
+		</main>
+
+		<script>
+			const navButton = document.querySelector("button[aria-expanded]");
+			const toggleNav = ({ target }) => {
+				const expanded =
+					target.getAttribute("aria-expanded") === "true" || false;
+				navButton.setAttribute("aria-expanded", !expanded);
+			};
+			navButton.addEventListener("click", toggleNav);
+		</script>
+	</body>
+</html>
