@@ -158,3 +158,62 @@
 			"footer footer footer";
 	}
 }
+.container8 {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 10px;
+	/* 'dense' makes things fit nicely using 'grid-auto-flow' */
+	grid-auto-flow: dense;
+}
+.item:nth-child(3n) {
+	grid-column: span 3;
+}
+.item:nth-child(2n) {
+	/* grid-column: span 2; */
+	grid-row: span2;
+}
+.container8 .item11 {
+	background-color: sienna;
+}
+.container8 .item12 {
+	background-color: green;
+}
+.container8 .item13 {
+	background-color: tomato;
+}
+.container8 .item14 {
+	background-color: cyan;
+}
+.container8 .item15 {
+	background-color: purple;
+}
+.container8 .item16 {
+	background-color: pink;
+}
+.container8 .item17 {
+	background-color: violet;
+}
+.container8 .item18 {
+	background-color: skyblue;
+}
+.container8 .item19 {
+	background-color: rgb(45, 160, 45);
+}
+.container8 .item20 {
+	background-color: rgb(27, 13, 7);
+}
+.container8 .item21 {
+	background-color: rgb(47, 45, 160);
+}
+.container8 .item22 {
+	background-color: rgb(139, 106, 90);
+}
+.container8 .item23 {
+	background-color: bisque;
+}
+.container8 .item24 {
+	background-color: coral;
+}
+.container8 .item25 {
+	background-color: darkcyan;
+}
