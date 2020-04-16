@@ -1,0 +1,21 @@
+.albums {
+	display: grid;
+	/* How should the col be layed out? How should the items be fit on the page */
+	/* each grid-item should fit into the browser starting from a min-width of 400px and spread out wt a max of 100%- 1fr. */
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-gap: 10px;
+}
+.album {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	background: rgba(80, 124, 124, 0.418);
+	padding: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+	align-items: center;
+	grid-gap: 10px;
+	color: white;
+	font-weight: 200;
+}
+.album-img {
+	width: 100%;
+}
